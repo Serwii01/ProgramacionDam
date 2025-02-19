@@ -13,7 +13,7 @@ public class Musica implements Reproducible {
 		System.out.println("Pausando música");
 	}
 
-	@Override
+	@Override //commit
 	public TipoContenido obtenerTipoContenido() {
 		return TipoContenido.MUSICA;
 		

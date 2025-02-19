@@ -6,3 +6,4 @@ public interface Reproducible {
 	abstract void pausar();
 	abstract TipoContenido obtenerTipoContenido();
 }
+//commit

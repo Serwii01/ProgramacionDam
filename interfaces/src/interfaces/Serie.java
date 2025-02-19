@@ -18,4 +18,4 @@ public class Serie implements Reproducible{
 		return TipoContenido.SERIE;
 		
 	}
-}
+}//commit

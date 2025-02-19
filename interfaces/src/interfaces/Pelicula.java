@@ -12,7 +12,7 @@ public class Pelicula implements Reproducible {
 	public void pausar() {
 		System.out.println("Pausando pelicula");
 	}
-
+//commit
 	@Override
 	public TipoContenido obtenerTipoContenido() {
 		return TipoContenido.PELICULA;
