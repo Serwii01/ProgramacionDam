@@ -1,23 +1,29 @@
 package ejercicioIteradores;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Redsocial {
 	ArrayList<Usuario> listaAmigos = new ArrayList<>();
 
-    public void agregarAmigo(Usuario amigo) {
+    public void addAmigo(Usuario amigo) {
         listaAmigos.add(amigo);
     }
 
     public void mostrarAmigos() {
-        System.out.println("Lista de amigos:");
         for (Usuario amigo : listaAmigos) {
-            System.out.println(amigo);
+            System.out.println(amigo.nombre+ ", "+amigo.edad);
         }
     }
 
     public void eliminarAmigosMenores(int edadMinima) {
-        listaAmigos.removeIf(amigo -> amigo.edad < edadMinima);
+        Iterator<Usuario> iterator = listaAmigos.iterator();
+        while (iterator.hasNext()) {
+            Usuario amigo = iterator.next();
+            if (amigo.edad < edadMinima) {
+                iterator.remove();
+            }
+        }
         System.out.println("Amigos menores de " + edadMinima + " se han eliminado");
     }
 

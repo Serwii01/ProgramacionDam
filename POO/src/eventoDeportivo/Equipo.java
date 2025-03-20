@@ -28,7 +28,7 @@ class Equipo {
         throw new JugadorNoEncontradoException("Jugador no encontrado en el equipo.");
     }
 
-    public void agregarPuntos(int puntos) {
+    public void setPuntos(int puntos) {
         this.puntos += puntos;
     }
 

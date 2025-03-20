@@ -15,7 +15,9 @@ class TorneoDeFutbol extends EventoDeportivo {
     public void inscribirEquipo(Equipo equipo) {
         equipos.add(equipo);
     }
-
+    public String getNombre() {
+    	return nombre;
+    }
     @Override
     public Participante obtenerGanador() {
         Equipo equipoGanador = equipos.stream().max(Comparator.comparingInt(Equipo::getPuntos)).orElse(null);

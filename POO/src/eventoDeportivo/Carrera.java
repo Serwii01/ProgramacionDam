@@ -12,7 +12,9 @@ class Carrera extends EventoDeportivo {
         this.distancia = distancia;
         this.tiempos = new ArrayList<>();
     }
-
+    public String getNombre() {
+    	return nombre;
+    }
     public void registrarTiempo(Participante participante, double tiempo) {
         participantes.add(participante);
         tiempos.add(tiempo);
