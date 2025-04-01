@@ -1,12 +1,12 @@
 package productosGestion;
 
-public class Producto {
+public class Producto implements Comparable<Producto> {
 	private String nombre;
-	private String precio;
+	private double precio;
 	private CategoriaProducto producto;
 	
 	
-	public Producto(String nombre, String precio, CategoriaProducto producto) {
+	public Producto(String nombre, double precio, CategoriaProducto producto) {
 		this.nombre = nombre;
 		this.precio = precio;
 		this.producto = producto;
@@ -23,12 +23,12 @@ public class Producto {
 	}
 
 
-	public String getPrecio() {
+	public double getPrecio() {
 		return precio;
 	}
 
 
-	public void setPrecio(String precio) {
+	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
 
@@ -40,6 +40,12 @@ public class Producto {
 
 	public void setProducto(CategoriaProducto producto) {
 		this.producto = producto;
+	}
+
+
+	@Override
+	public int compareTo(Producto otro) {
+		return Double.compare(this.precio, otro.precio);
 	}
 	
 	
